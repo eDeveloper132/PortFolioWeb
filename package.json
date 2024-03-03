@@ -1,0 +1,29 @@
+{
+  "name": "myfirstweb",
+  "version": "1.0.0",
+  "description": "MyFirstWeb",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node index.js",
+    "dev": "nodemon index.js",
+    "deva": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eDeveloper132/PortFolioWeb.git"
+  },
+  "author": "Muhammad Ilyas",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/nodemon": "^1.19.6",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  }
+}
