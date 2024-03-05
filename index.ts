@@ -2,6 +2,8 @@ import chalk from "chalk";
 import dotenv from "dotenv";
 import express from "express";
 import path from "path";
+import cors from "cors"
+import Routes from "./Routes/app.js";
 import { Headers } from "undici-types";
 
 const app = express();
@@ -11,6 +13,7 @@ const PORT = process.env.PORT || 3400;
 
 
 app.use(express.json());
+app.use(cors());
 app.use("*",(req,res,next)=>
 {
     next();
@@ -26,6 +29,7 @@ app.get("/", (req, res) =>
     res.sendFile(path.join(currentDirectory, "index.html"));
 }
 )
+app.use("/Todos",Routes);
 
 // Middleware for handling errors
 app.use("*", (req, res, next) => {
